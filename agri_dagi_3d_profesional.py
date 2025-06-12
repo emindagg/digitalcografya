@@ -171,12 +171,14 @@ class AgriDagi3D:
         return color_index
     
     def _create_topographic_colorscale(self):
-        return [
-            [0.0, '#0d47a1'], [0.1, '#1565c0'], [0.2, '#2196f3'], [0.3, '#4fc3f7'],
-            [0.35, '#81c784'], [0.4, '#66bb6a'], [0.5, '#4caf50'], [0.6, '#8bc34a'],
-            [0.65, '#cddc39'], [0.7, '#ffeb3b'], [0.75, '#ffc107'], [0.8, '#ff9800'],
-            [0.85, '#ff5722'], [0.9, '#795548'], [0.95, '#6d4c41'], [1.0, '#ffffff']
-        ]
+        return[
+        [0.0,  '#1b5e20'],  # Düşük rakım (Koyu, Canlı Yeşil)
+        [0.2,  '#f9a825'],  # Alt-orta rakım (Belirgin Sarı)
+        [0.4,  '#ef6c00'],  # Orta rakım (Güçlü Turuncu)
+        [0.6,  '#c62828'],  # Yüksek rakım (Koyu Kırmızı)
+        [0.8,  '#4e342e'],  # Zirve altı kayalıklar (Çok Koyu Kahve/Bordo)
+        [1.0,  '#ffffff']   # Zirve, kar (Tam Beyaz)
+    ]
     
     def create_professional_analysis(self, sample_rate=4):
         print("📊 Profesyonel analiz dashboard'u oluşturuluyor...")
